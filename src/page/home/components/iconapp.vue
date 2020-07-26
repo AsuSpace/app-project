@@ -111,6 +111,7 @@ export default {
   padding-bottom:44%;
   }  
 .icon-contain {
+    margin-bottom: 5px;
 
   .icon-item {
     width: 20%;

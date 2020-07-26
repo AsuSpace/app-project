@@ -1,5 +1,6 @@
 @import "base.scss";
 
+//文字超出省略
 @mixin ellipsis(){
 overflow: hidden;
 white-space: nowrap;
