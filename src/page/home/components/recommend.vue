@@ -4,7 +4,7 @@
         <div class="recom-content">
             <div class="recom-item" v-for="item in recomList" :key="item.id">
                 <div class="recom-img" >
-             <img :src="item.ImgUrl">
+             <img :src="item.imgUrl">
                 </div>               
                <div class="recom-info">
                <p class="recom-title">{{item.title}}</p>
@@ -19,27 +19,9 @@
 <script>
 export default {
     name:"HomeRecommend",
-    data(){
-        return{
-            recomList:[
-                {id:"001",
-                ImgUrl:"http://imgs.qunarzz.com/p/tts6/1906/6b/50ff5f9be7e77602.jpg_r_480x320x95_d04c5a69.jpg",
-                title:"美帝的美，留在图里也要藏在心底",
-                desc:"不负嵊夏好时光，泗乎太安逸.不负嵊夏好时光，泗乎太安逸"
-                },
-                {id:"002",
-                ImgUrl:"http://imgs.qunarzz.com/p/tts6/1906/6b/50ff5f9be7e77602.jpg_r_480x320x95_d04c5a69.jpg",
-                title:"美帝的美，留在图里也要藏在心底",
-                desc:"不负嵊夏好时光，泗乎太安逸.不负嵊夏好时光，泗乎太安逸"
-                },
-                {id:"003",
-                ImgUrl:"http://imgs.qunarzz.com/p/tts6/1906/6b/50ff5f9be7e77602.jpg_r_480x320x95_d04c5a69.jpg",
-                title:"美帝的美，留在图里也要藏在心底",
-                desc:"不负嵊夏好时光，泗乎太安逸.不负嵊夏好时光，泗乎太安逸"
-                }
-            ]
-        }
-    }
+    props:{
+        recomList:Array
+    },    
 }
 </script>
 <style scoped lang="scss">
@@ -63,11 +45,9 @@ export default {
             margin:8px 10px;
             display: flex;
         .recom-img{
-            width:90px;
-            height: 80px;
-            // background: burlywood;
+            width:70px;
+            height:70px;
             margin-right: 20px;
-            // overflow: hidden;
             img{
                 width: 100%;
             }

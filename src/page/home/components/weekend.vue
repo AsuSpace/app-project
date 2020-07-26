@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div class="title">周末去哪儿</div>
     <div class="recom-content">
-      <div class="recom-item" v-for="item in recomList" :key="item.id">
+      <div class="recom-item" v-for="item in weekList" :key="item.id">
         <div class="recom-img">
-          <img :src="item.ImgUrl" />
+          <img :src="item.imgUrl" />
         </div>
         <div class="recom-info">
           <p class="recom-title">{{item.title}}</p>
@@ -17,33 +17,11 @@
 <script>
 export default {
   name: "HomeWeek",
-  data() {
-    return {
-      recomList: [
-        {
-          id: "001",
-          ImgUrl:
-            "http://imgs.qunarzz.com/vc/6d/9f/35/b8ad5468f73fd60ec0ced086f6.jpg_92.jpg",
-          title: "驾一叶扁舟，寻瓯江往事",
-          desc: "厦门，带娃出行与幸福同行.厦门，带娃出行与幸福同行",
-        },
-        {
-          id: "002",
-          ImgUrl:
-            "http://imgs.qunarzz.com/vc/6d/9f/35/b8ad5468f73fd60ec0ced086f6.jpg_92.jpg",
-          title: "驾一叶扁舟，寻瓯江往事",
-          desc: "厦门，带娃出行与幸福同行.厦门，带娃出行与幸福同行",
-        },
-        {
-          id: "003",
-          ImgUrl:
-            "http://imgs.qunarzz.com/vc/6d/9f/35/b8ad5468f73fd60ec0ced086f6.jpg_92.jpg",
-          title: "驾一叶扁舟，寻瓯江往事",
-          desc: "厦门，带娃出行与幸福同行.厦门，带娃出行与幸福同行",
-        },
-      ],
-    };
-  },
+  props:{
+    weekList:Array
+
+  }
+ 
 };
 </script>
 <style scoped lang="scss">
@@ -60,7 +38,7 @@ export default {
     .recom-img {
       overflow: hidden;
       height: 0;
-      padding-bottom: 30%;
+      padding-bottom: 37.08%;
       img {
         width: 100%;
       }
