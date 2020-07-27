@@ -6,3 +6,11 @@ overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
 }
+
+// 垂直居中
+@mixin flexCenter($layout: row ){
+    display: flex;
+    flex-direction:$layout;
+    justify-content: center;
+    align-items:center;
+}
